@@ -54,9 +54,11 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\ball.cs" />
+     <Compile Include="Assets\EndingScript.cs" />
      <Compile Include="Assets\kanan.cs" />
      <Compile Include="Assets\kiri.cs" />
      <Compile Include="Assets\PlayScript.cs" />
+     <Compile Include="Assets\ScoringScript.cs" />
      <Compile Include="Assets\TimerScript.cs" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />

@@ -6,7 +6,8 @@ public class ball : MonoBehaviour
 {
    // public int speed=20;
     public Rigidbody2D sesuatu;
-    // Start is called before the first frame update
+    
+    public GameObject masterScript;
     public Animator animtr;
     void Start()
     {
@@ -30,6 +31,7 @@ public class ball : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other) {
         if(other.collider.name=="DindingKanan" || other.collider.name=="DindingKiri") {
+           masterScript.GetComponent<ScoringScript>().UpdateScore(other.collider.name);
            StartCoroutine(jeda());
         }
     }
