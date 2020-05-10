@@ -9,6 +9,7 @@ public class ball : MonoBehaviour
     
     public GameObject masterScript;
     public Animator animtr;
+    public AudioSource hitEffect;
     void Start()
     {
         int x = Random.Range(0, 2) * 2 - 1; // x bisa -1 atau 1
@@ -33,6 +34,10 @@ public class ball : MonoBehaviour
         if(other.collider.name=="DindingKanan" || other.collider.name=="DindingKiri") {
            masterScript.GetComponent<ScoringScript>().UpdateScore(other.collider.name);
            StartCoroutine(jeda());
+        }
+        if (other.collider.tag == "Player")
+        {
+            hitEffect.Play();
         }
     }
     IEnumerator jeda(){
